@@ -1,0 +1,28 @@
+.sign-up {
+  display: grid;
+  place-items: center;
+  flex-grow: 1;
+}
+.sign-up__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 14px;
+}
+.sign-up__title {
+  color: var(--txtColor800);
+  font-weight: 600;
+  font-size: 24px;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.sign-up__messgage {
+  margin-top: 22px;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 400;
+  color: var(--txtColor700);
+}

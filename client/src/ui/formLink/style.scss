@@ -1,0 +1,18 @@
+.form-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--txtColor800);
+  font-weight: 500;
+  outline: transparent;
+  
+  .form-link__icon {
+    margin-left: 5px;
+    transform: translateX(0);
+    transition: transform .2s ease;
+  }
+  
+  &:hover .form-link__icon,
+  &:focus .form-link__icon {
+    transform: translateX(-5px);
+  }
+}

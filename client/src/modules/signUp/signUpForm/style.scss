@@ -1,0 +1,20 @@
+.sign-up-form {
+  max-width: 450px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bgColor300);
+  box-shadow: 4px 4px 8px -4px var(--shadowColor500);
+  border-radius: 4px;
+}
+.sign-up-form__error {
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--errorColor);
+  
+  .error-icon {
+    vertical-align: middle;
+  }
+}

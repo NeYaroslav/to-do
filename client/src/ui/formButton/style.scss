@@ -1,0 +1,64 @@
+.form-button {
+  position: relative;
+  padding: 8px 10px;
+  min-width: 120px;
+  border-radius: 0;
+  outline: none;
+  border: 0;
+  color: var(--bgColor100);
+  cursor: pointer;
+  font-weight: 500;
+  background: var(--bgColor700);
+  transition: color .2s ease, background-color .2s ease;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bgColor100);
+    transition: width .2s ease-in-out;
+  }
+
+  &:not(:disabled):hover::after {
+    width: 100%;
+    left: 0;
+  }
+  &:not(:disabled):hover {
+    color: var(--txtColor700);
+  }
+
+  &:disabled {
+    cursor: auto;
+    background: var(--bgColor600); 
+  }
+  .decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: radial-gradient( transparent, var(--bgColor600) );
+    z-index: -1;
+    animation: animateDecor .3s ease-in-out forwards;
+    transform: translate(-50%, -50%) scale(.1);
+    border-radius: 500px;
+    pointer-events: none;
+  }
+}
+@keyframes animateDecor {
+  0%{
+    transform: translate(-50%, -50%) scale(.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+  }
+}
